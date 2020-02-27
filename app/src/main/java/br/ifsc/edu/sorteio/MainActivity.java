@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -30,12 +31,14 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void sortear(View view)
-    {
+    public void sortear(View view) {
         int inicial = Integer.parseInt(editTextInicial.getText().toString());
         int fina = Integer.parseInt(editTextFinal.getText().toString());
         int random = gerador.nextInt((fina - inicial) + 1) + inicial;
         TextViewResultado.setText(Integer.toString(random));
+        Button button = (Button) view;
+        button.setText("Sortear");
 
     }
+
 }
