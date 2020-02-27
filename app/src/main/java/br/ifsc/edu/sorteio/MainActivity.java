@@ -7,12 +7,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity
 {
 
     EditText editTextInicial ;
     EditText editTextFinal   ;
-    TextView textViewResultado;
+    TextView TextViewResultado;
+    Random gerador = new Random();
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -21,7 +24,8 @@ public class MainActivity extends AppCompatActivity
 
         editTextInicial   = findViewById(R.id.editTextInicial  );
         editTextFinal     = findViewById(R.id.editTextFinal    );
-        textViewResultado = findViewById(R.id.textViewResultado);
+        TextViewResultado = findViewById(R.id.textViewResultado);
+        TextViewResultado.setText(" ");
 
     }
 
@@ -29,8 +33,8 @@ public class MainActivity extends AppCompatActivity
     {
         int inicial = Integer.parseInt(editTextInicial.getText().toString());
         int fina = Integer.parseInt(editTextFinal.getText().toString());
-        int random = 0;
-        textViewResultado.setText(Integer.toString(random));
+        int random = gerador.nextInt((fina - inicial) + 1) + inicial;
+        TextViewResultado.setText(Integer.toString(random));
 
     }
 }

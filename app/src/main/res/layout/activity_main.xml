@@ -10,18 +10,29 @@
         android:id="@+id/textViewResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="172dp"
         android:text="Hello World!"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInicial" />
 
     <Button
         android:id="@+id/buttonSorteio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sortear"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="332dp"
         android:onClick="sortear"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="228dp" />
+        android:text="Sortear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultado" />
 
     <EditText
         android:id="@+id/editTextInicial"
@@ -29,8 +40,10 @@
         android:layout_height="55dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="39dp"
         android:ems="10"
         android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/editTextFinal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,11 +51,13 @@
         android:id="@+id/editTextFinal"
         android:layout_width="156dp"
         android:layout_height="55dp"
+        android:layout_marginStart="39dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextInicial"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
