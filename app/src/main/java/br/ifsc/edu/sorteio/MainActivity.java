@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity
         TextViewResultado = findViewById(R.id.textViewResultado);
         TextViewResultado.setText(" ");
 
+
     }
 
     public void sortear(View view)
